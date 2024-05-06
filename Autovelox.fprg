@@ -1,0 +1,96 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Luca_"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-05-03 03:41:19 "/>
+        <attribute name="created" value="THVjYV87SFlQTk87MjAyNC0wNS0wMzsiMDI6NDI6MDMgIjsyMDY0"/>
+        <attribute name="edited" value="THVjYV87SFlQTk87MjAyNC0wNS0wMzsiMDM6NDE6MTkgIjsyOzIxODA="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="limite" type="Integer" array="False" size=""/>
+            <declare name="velocit&#224;" type="Integer" array="False" size=""/>
+            <declare name="differenza" type="Integer" array="False" size=""/>
+            <output expression="&quot;Inserire limite di velocit&#224;&quot;" newline="True"/>
+            <input variable="limite"/>
+            <declare name="conferma" type="Boolean" array="False" size=""/>
+            <assign variable="conferma" expression="true"/>
+            <do expression="conferma = true">
+                <output expression="&quot;Inserire velocit&#224; rilevata&quot;" newline="True"/>
+                <input variable="velocit&#224;"/>
+                <assign variable="differenza" expression="velocit&#224; - limite"/>
+                <if expression="velocit&#224;&lt;=100">
+                    <then>
+                        <if expression="velocit&#224;&gt;limite+5">
+                            <then>
+                                <if expression="differenza&gt;5 &amp;&amp; differenza&lt;10">
+                                    <then>
+                                        <output expression="&quot;La sanzione &#232; tra 42 e 100.000&#8364;&quot;" newline="True"/>
+                                    </then>
+                                    <else>
+                                        <if expression="differenza&gt;=10 &amp;&amp; differenza&lt;=40">
+                                            <then>
+                                                <output expression="&quot;La sanzione &#232; tra 173&#8364; e 694&#8364;&quot;" newline="True"/>
+                                            </then>
+                                            <else>
+                                                <if expression="differenza&gt;40 &amp;&amp; differenza&lt;=60">
+                                                    <then>
+                                                        <output expression="&quot;La sanzione &#232; tra 543&#8364; e 2.170&#8364;&quot;" newline="True"/>
+                                                    </then>
+                                                    <else>
+                                                        <output expression="&quot;La sanzione &#232; tra 845&#8364; e 3382&#8364;&quot;" newline="True"/>
+                                                    </else>
+                                                </if>
+                                            </else>
+                                        </if>
+                                    </else>
+                                </if>
+                                <output expression="&quot;Hai superato il limite di :&quot;&amp;differenza&amp;&quot;Km/h&quot;" newline="True"/>
+                            </then>
+                            <else>
+                                <output expression="&quot;Rispettato il limite&quot;" newline="True"/>
+                            </else>
+                        </if>
+                    </then>
+                    <else>
+                        <if expression="velocit&#224;&gt;limite/100*105">
+                            <then>
+                                <if expression="differenza&gt;5 &amp;&amp; differenza&lt;10">
+                                    <then>
+                                        <output expression="&quot;La sanzione &#232; tra 42&#8364; e 100.000&#8364;&quot;" newline="True"/>
+                                    </then>
+                                    <else>
+                                        <if expression="differenza&gt;=10 &amp;&amp; differenza&lt;=40">
+                                            <then>
+                                                <output expression="&quot;La sanzione &#232; tra 173&#8364; e 694&#8364;&quot;" newline="True"/>
+                                            </then>
+                                            <else>
+                                                <if expression="differenza&gt;40 &amp;&amp; differenza&lt;=60">
+                                                    <then>
+                                                        <output expression="&quot;La sanzione &#232; tra 543&#8364; e 2.170&#8364;&quot;" newline="True"/>
+                                                    </then>
+                                                    <else>
+                                                        <output expression="&quot;La sanzione &#232; tra 845&#8364; e 3382&#8364;&quot;" newline="True"/>
+                                                    </else>
+                                                </if>
+                                            </else>
+                                        </if>
+                                    </else>
+                                </if>
+                                <output expression="&quot;Hai superato il limite di :&quot;&amp;differenza&amp;&quot;Km/h&quot;" newline="True"/>
+                            </then>
+                            <else>
+                                <output expression="&quot;Rispettato il limite&quot;" newline="True"/>
+                            </else>
+                        </if>
+                    </else>
+                </if>
+                <output expression="&quot;Controllare altri veicoli?&quot;" newline="True"/>
+                <input variable="conferma"/>
+            </do>
+        </body>
+    </function>
+</flowgorithm>
